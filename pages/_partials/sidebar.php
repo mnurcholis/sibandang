@@ -30,6 +30,9 @@ function is_active($page)
     <li class="<?php is_active('mutasi'); ?>">
         <a href="../mutasi"><i class="glyphicon glyphicon-export"></i> Data Mutasi</a>
     </li>
+    <li class="<?php is_active('galeri'); ?>">
+        <a href="../galeri"><i class="glyphicon glyphicon-export"></i> Data Galeri</a>
+    </li>
     <li class="<?php is_active('laporan'); ?>">
         <a href="../laporan"><i class="glyphicon glyphicon-export"></i> Laporan</a>
     </li>
