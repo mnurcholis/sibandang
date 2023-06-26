@@ -525,11 +525,68 @@ $jumlah_warga_p = mysqli_fetch_assoc($hasil_warga_p);
     <div class="container">
         <center>
             <h3>Grafik Penduduk Desa Sibandang </h3>
+            <h5>Total Penduduk : 1009 </h5>
             <br>
         </center>
-        <div style="padding:0px 300px 100px 300px;">
-            <canvas id="myChart"></canvas>
+        <div class="row text-center">
+            <div class="col-3">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-2">
+                <div>
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="row text-center">
+            <div class="col-3">
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+
         <br><br>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
@@ -537,30 +594,21 @@ $jumlah_warga_p = mysqli_fetch_assoc($hasil_warga_p);
             var myChart = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
-                    labels: ['Laki-Laki', 'Perempuan', 'Total'],
+                    labels: ['Laki-Laki', 'Perempuan'],
                     datasets: [{
-                        label: '# Jumlah Penduduk',
-                        data: [480, 529, 1009],
+                        label: '# Jumlah',
+                        data: [480, 529],
                         backgroundColor: [
                             'rgba(255, 99, 132, 1)',
                             'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)'
                         ],
                         borderColor: [
                             'rgba(255, 99, 132, 1)',
                             'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)'
                         ],
                         borderWidth: 1
                     }]
                 },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
             });
         </script>
     </div>

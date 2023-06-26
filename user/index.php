@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,6 +14,16 @@
 
         body {
             font-family: Verdana, sans-serif;
+            margin: 0;
+            /* Add this to remove default margin */
+            padding: 0;
+            /* Add this to remove default padding */
+            background-image: url("../bg3.jpeg");
+            /* Add background image */
+            background-size: cover;
+            /* Adjust background size */
+            background-position: center;
+            /* Adjust background position */
         }
 
         .mySlides {
@@ -26,7 +36,6 @@
 
         /* Slideshow container */
         .slideshow-container {
-
             position: relative;
             margin: auto;
         }
@@ -89,11 +98,14 @@
             }
         }
     </style>
+</head>
 
 <body>
-
-    <div style="display: flex;padding:10px 30px;background-color:royalblue;">
+    <div style="display: flex; padding: 10px 30px; background-color: royalblue;">
         <div style="margin-top: 10px;">
+            <img src="img/logo.jpg" alt="Logo" width="50">
+        </div>
+        <div style="margin-top: 10px; margin-left: 10px;">
             <h3 class="text-white">
                 Sistem Informasi Desa Sibandang
             </h3>
@@ -102,58 +114,20 @@
 
     <?php include "navbar.php"; ?>
 
-    <div class="mt-5 d-flex flex-column justify-content-center">
-        <br>
-        <center>
-            <div class="slideshow-container">
-
-                <div class="mySlides fade">
-                    <div class="numbertext">1 / 2</div>
-                    <img src="../bg.jpeg" style="width:100%; object-fit: cover; height: 50vh;">
-                    <div class="text">Caption Text</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">2 / 2</div>
-                    <img src="../bg3.jpeg" style="width:100%; object-fit: cover; height: 50vh;">
-                    <div class="text">Caption Two</div>
-                </div>
-
-            </div>
-            <br>
-
-            <div style="text-align:center">
-                <span class="dot"></span>
-                <span class="dot"></span>
-
-            </div>
-
-
-
-        </center>
-        <br>
-        <center>
-            <img src="../pages/galeri/img/a5.jpeg" width="250" alt="">
-            <br>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15945.738176212744!2d98.89268123889849!3d2.359894511912689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x302e1eb62d02645f%3A0xb03c619e591d46fa!2sSibandang%2C%20Kec.%20Muara%2C%20Kabupaten%20Tapanuli%20Utara%2C%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1683703831216!5m2!1sid!2sid" class="w-50" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </center>
-    </div>
+    <!-- Remove the <div> element that wraps the <img> tag -->
+    <!-- Adjust the positioning of other elements based on your requirements -->
 
     <br><br><br><br><br><br><br><br><br>
     <footer class="footer bg-white w-100" style="position:fixed;bottom:0;width:100%;">
         <div class="container">
             <footer class="d-flex justify-content-between py-3 my-4 border-top">
                 <p class=" mb-0 text-muted">Copyright @Lasmita Siregar | Universitas Methodist Indonesia</p>
-
-                <div>
-
-                </div>
+                <div></div>
             </footer>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script>
         let slideIndex = 0;
         showSlides();
