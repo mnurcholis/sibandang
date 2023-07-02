@@ -14,49 +14,34 @@
     <?php
     include('../config/koneksi.php');
 
+    $get_id_berita = $_GET['id_berita'];
+
     // ambil dari database
-    $query = "SELECT * FROM galeri";
+    $query = "SELECT * FROM berita WHERE id_berita = $get_id_berita";
 
     $hasil = mysqli_query($db, $query);
 
-    $data_galeri = array();
+    $berita = array();
 
     while ($row = mysqli_fetch_assoc($hasil)) {
-        $data_galeri[] = $row;
+        $berita[] = $row;
     }
 
     ?>
     <div class="container my-5">
         <h3 class="my-3">
-            Desa Sibandang
-            Kecamatan Muara, Kabupaten Tapanuli Utara
-        </h3>
-        <h3 class="my-3">
-            Galeri
+            <?= $berita[0]['judul_berita'] ?>
         </h3>
         <div class="row justify-content-start">
-            <?php foreach ($data_galeri as $galeri) : ?>
-                <div class="col-4 mb-3">
-                    <div class="card">
-                        <img src="../assets/upload/<?= $galeri['path_galeri'] ?>" alt="<?= $galeri['judul_galeri'] ?>" class="img-fluid w-2000 mb-150 equal-image img-responsive" class="card-img-top">
-                        <div class="card-body">
-                            <p class="card-text"><?= $galeri['judul_galeri'] ?></p>
-                        </div>
+            <div class="col-12 mb-3">
+                <div class="card">
+                    <img src="../assets/upload/<?= $berita[0]['gambar_berita'] ?>" alt="<?= $berita[0]['judul_berita'] ?>" class="img-fluid w-2000 mb-150 equal-image img-responsive" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text"><?= $berita[0]['isi_berita'] ?></p>
                     </div>
                 </div>
-            <?php endforeach ?>
+            </div>
         </div>
-
-        <style>
-            .equal-image {
-                height: auto;
-                max-height: 200px;
-                /* Adjust the max-height value as needed */
-                object-fit: cover;
-                /* Ensure the image maintains its aspect ratio and covers the container */
-            }
-        </style>
-
 
     </div>
 

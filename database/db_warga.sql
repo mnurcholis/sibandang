@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 26, 2023 at 11:02 PM
+-- Generation Time: Jul 02, 2023 at 02:45 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_warga`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `berita`
+--
+
+CREATE TABLE `berita` (
+  `id_berita` int NOT NULL,
+  `slug_berita` varchar(255) NOT NULL,
+  `judul_berita` varchar(255) NOT NULL,
+  `gambar_berita` varchar(255) NOT NULL,
+  `isi_berita` text NOT NULL,
+  `waktu_berita` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `user_id` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `berita`
+--
+
+INSERT INTO `berita` (`id_berita`, `slug_berita`, `judul_berita`, `gambar_berita`, `isi_berita`, `waktu_berita`, `user_id`) VALUES
+(2, 'tambah-data-berita', 'Tambah data Berita', 'c692562238d8c12c32434c50b96d56ae.jpeg', 'Tambah data Berita Tambah jangan risukan untuk menjadi yang lebih baik lagi dan lagi dan jangan pula untuk mendjadiya bagsuuishao kjhosdakhoibsauibkj hoh uiuhouhs oihoaso', '2023-06-30 11:01:07', 1);
 
 -- --------------------------------------------------------
 
@@ -95,7 +118,19 @@ CREATE TABLE `galeri` (
 --
 
 INSERT INTO `galeri` (`id_galeri`, `path_galeri`, `judul_galeri`, `caption_galeri`, `tautan_galeri`, `id_user`) VALUES
-(3, '693a9fdd4c2fd0700968fba0d07ff3c0.jpeg', 'Di Pulau Sibandang wisatawan bisa menyaksikan proses pembuatan Ulos Harungguan di Desa Papande', 'Di Pulau Sibandang wisatawan bisa menyaksikan proses pembuatan Ulos Harungguan di Desa Papande. Ulos di desa tersebut masih dibuat dengan alat tenun tradisional. Konon, ulos dari Desa Papande tidak diperuntukan kepada orang biasa, namun hanya kepada para raja Batak. Oleh karena itu, Ulos Harungguan terkenal sebagai ulos mewah. Dalam proses pembuatannya dikerjakan oleh masyarakat lokal dari generasi muda hingga tua. Jika kamu ingin mencari ulos dengan motif yang indah dan kualitas yang baik, maka bisa berkunjung ke Desa ini.', '', 1);
+(3, '693a9fdd4c2fd0700968fba0d07ff3c0.jpeg', 'Di Pulau Sibandang wisatawan bisa menyaksikan proses pembuatan Ulos Harungguan di Desa Papande', 'Di Pulau Sibandang wisatawan bisa menyaksikan proses pembuatan Ulos Harungguan di Desa Papande. Ulos di desa tersebut masih dibuat dengan alat tenun tradisional. Konon, ulos dari Desa Papande tidak diperuntukan kepada orang biasa, namun hanya kepada para raja Batak. Oleh karena itu, Ulos Harungguan terkenal sebagai ulos mewah. Dalam proses pembuatannya dikerjakan oleh masyarakat lokal dari generasi muda hingga tua. Jika kamu ingin mencari ulos dengan motif yang indah dan kualitas yang baik, maka bisa berkunjung ke Desa ini.', '', 1),
+(4, '9d607a663f3e9b0a90c3c8d4426640dc.jpeg', 'Panen mangga merupakan mata pencaharian Desa Sibandang yang dipanen 2 kali setahun. Dengan hasil yang memuaskan dan rasa mangga yang sangat manis', 'Panen mangga merupakan mata pencaharian Desa Sibandang yang dipanen 2 kali setahun', '', 1),
+(5, '894f782a148b33af1e39a0efed952d69.jpeg', 'Kegiatan panen Coklat juga merupakan mata pencaharian Desa Sibandang, dan sudah banyak di tanam dan hasilnya sangat banyak.', 'Kegiatan panen Coklat juga merupakan mata pencaharian Desa Sibandang, dan sudah banyak di tanam dan hasilnya sangat banyak.', '', 1),
+(6, '68c42382c8b93fc29c2fcb6a444aeda5.jpeg', 'Program Imunisasi anak di bawah umur ini dilaksanakan di Kantor Desa Sibandang. Para bidan desa akan datang ke Desa tersebut, memberikan obat dan menyuntik anak di bawah umur itu.', 'Program Imunisasi anak di bawah umur ini dilaksanakan di Kantor Desa Sibandang. Para bidan desa akan datang ke Desa tersebut, memberikan obat dan menyuntik anak di bawah umur itu.', '', 1),
+(7, 'f74dd50cfec0f8549406fee6191d2f8d.jpeg', 'Program pembersihan dan perbaikan jalan. Yang dilakukan oleh para warga Desa Sibandang dan di tugaskan oleh Kepala Desa, demi menjaga kelestarian lingkungan tersebut', 'Program pembersihan dan perbaikan jalan. Yang dilakukan oleh para warga Desa Sibandang dan di tugaskan oleh Kepala Desa, demi menjaga kelestarian lingkungan tersebut', '', 1),
+(8, 'c692562238d8c12c32434c50b96d56ae.jpeg', 'Program pembersihan dan perbaikan jalan. Yang dilakukan oleh para warga Desa Sibandang dan di tugaskan oleh Kepala Desa, demi menjaga kelestarian lingkungan tersebut', 'Program pembersihan dan perbaikan jalan. Yang dilakukan oleh para warga Desa Sibandang dan di tugaskan oleh Kepala Desa, demi menjaga kelestarian lingkungan tersebut', '', 1),
+(9, 'e54cc06625bbadf12163b41a3cb92bf8.jpg', 'Jalan Menuju Desa Wisata Sibandang', 'Jalan Menuju Desa Wisata Sibandang', '', 1),
+(10, '97ee3440cce820e501f35965096b4934.jpeg', 'Wisatawan Berkunjung ke Desa Sibandang', 'Wisatawan Berkunjung ke Desa Sibandang', '', 1),
+(11, 'd606757a9c50dedc85e3cc90949b10ae.jpeg', 'Makan Bersama Kepala Desa dan Aparatur Desa Sibandang', 'Makan Bersama Kepala Desa dan Aparatur Desa Sibandang', '', 1),
+(12, 'd683af551b56cb9d02cc44571a95f192.jpeg', 'Rapat Dengan Warga Desa Sibandang', 'Rapat Dengan Warga Desa Sibandang', '', 1),
+(13, '107041c162d4bbc59398392cfc2dfd20.jpeg', 'Rapat Dengan Warga Desa Sibandang', 'Rapat Dengan Warga Desa Sibandang', '', 1),
+(14, 'c51ce410c124a10e0db5e4b97fc2af39.png', 'Kegiatan Senam Lansia', 'Kegiatan Senam Lansia', '', 1),
+(15, 'aab3238922bcc25a6f606eb525ffdc56.png', 'Kegiatan Gotong Royong', 'Kegiatan Gotong Royong', '', 1);
 
 -- --------------------------------------------------------
 
@@ -130,6 +165,30 @@ INSERT INTO `kartu_keluarga` (`id_keluarga`, `nomor_keluarga`, `id_kepala_keluar
 (2, '1202151308200002', 9, 'Sibandang', 'Sibandang', 'Muara', 'Tapanuli Utara', 'Sumatera Utara', 'Indonesia', '-', '-', '22476', 1, '2023-03-30 13:20:08', '0000-00-00 00:00:00'),
 (3, '1202151807082075', 7, 'Sibandang', 'Sibandang', 'Muara', 'Tapanuli Utara', 'Sumatera Utara', 'Indonesia', '-', '-', '22476', 1, '2023-03-30 13:21:43', '0000-00-00 00:00:00'),
 (4, '1202150210150003', 12, 'Sibandang', 'Sibandang', 'Muara', 'Tapanuli Utara', 'Sumatera Utara', 'Indonesia', '-', '-', '22476', 1, '2023-03-30 13:22:45', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kuliner`
+--
+
+CREATE TABLE `kuliner` (
+  `id_kuliner` int NOT NULL,
+  `gambar_kuliner` varchar(255) NOT NULL,
+  `judul_kuliner` varchar(255) NOT NULL,
+  `slug_kuliner` varchar(255) DEFAULT NULL,
+  `detail_kuliner` text NOT NULL,
+  `harga` int NOT NULL,
+  `no_wa` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `kuliner`
+--
+
+INSERT INTO `kuliner` (`id_kuliner`, `gambar_kuliner`, `judul_kuliner`, `slug_kuliner`, `detail_kuliner`, `harga`, `no_wa`) VALUES
+(2, '9d607a663f3e9b0a90c3c8d4426640dc.jpeg', 'dsa', 'dsa', '3131', 300000, '3333'),
+(3, '68c42382c8b93fc29c2fcb6a444aeda5.jpeg', 'dsa1', 'dsa', '546846168 dfgfgfgdfgdf', 231321, '82516816160');
 
 -- --------------------------------------------------------
 
@@ -294,6 +353,12 @@ CREATE TABLE `warga_has_kartu_keluarga` (
 --
 
 --
+-- Indexes for table `berita`
+--
+ALTER TABLE `berita`
+  ADD PRIMARY KEY (`id_berita`);
+
+--
 -- Indexes for table `data_blt`
 --
 ALTER TABLE `data_blt`
@@ -319,6 +384,12 @@ ALTER TABLE `kartu_keluarga`
   ADD PRIMARY KEY (`id_keluarga`),
   ADD KEY `id_kepala_keluarga` (`id_kepala_keluarga`),
   ADD KEY `id_user` (`id_user`);
+
+--
+-- Indexes for table `kuliner`
+--
+ALTER TABLE `kuliner`
+  ADD PRIMARY KEY (`id_kuliner`);
 
 --
 -- Indexes for table `mutasi`
@@ -358,6 +429,12 @@ ALTER TABLE `warga_has_kartu_keluarga`
 --
 
 --
+-- AUTO_INCREMENT for table `berita`
+--
+ALTER TABLE `berita`
+  MODIFY `id_berita` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `data_blt`
 --
 ALTER TABLE `data_blt`
@@ -373,13 +450,19 @@ ALTER TABLE `data_pegawai`
 -- AUTO_INCREMENT for table `galeri`
 --
 ALTER TABLE `galeri`
-  MODIFY `id_galeri` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_galeri` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `kartu_keluarga`
 --
 ALTER TABLE `kartu_keluarga`
   MODIFY `id_keluarga` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `kuliner`
+--
+ALTER TABLE `kuliner`
+  MODIFY `id_kuliner` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `mutasi`

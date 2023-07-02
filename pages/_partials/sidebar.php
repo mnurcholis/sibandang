@@ -31,10 +31,16 @@ function is_active($page)
         <a href="../mutasi"><i class="glyphicon glyphicon-export"></i> Data Mutasi</a>
     </li>
     <li class="<?php is_active('galeri'); ?>">
-        <a href="../galeri"><i class="glyphicon glyphicon-export"></i> Data Galeri</a>
+        <a href="../galeri"><i class="glyphicon glyphicon-picture"></i> Data Galeri</a>
+    </li>
+    <li class="<?php is_active('berita'); ?>">
+        <a href="../berita"><i class="glyphicon glyphicon-text-color"></i> Berita</a>
+    </li>
+    <li class="<?php is_active('kuliner'); ?>">
+        <a href="../kuliner"><i class="glyphicon glyphicon-asterisk"></i> Kuliner</a>
     </li>
     <li class="<?php is_active('laporan'); ?>">
-        <a href="../laporan"><i class="glyphicon glyphicon-export"></i> Laporan</a>
+        <a href="../laporan"><i class="glyphicon glyphicon-signal"></i> Laporan</a>
     </li>
 </ul>
 

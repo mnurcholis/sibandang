@@ -15,32 +15,29 @@
     include('../config/koneksi.php');
 
     // ambil dari database
-    $query = "SELECT * FROM galeri";
+    $query = "SELECT * FROM berita";
 
     $hasil = mysqli_query($db, $query);
 
-    $data_galeri = array();
+    $data_berita = array();
 
     while ($row = mysqli_fetch_assoc($hasil)) {
-        $data_galeri[] = $row;
+        $data_berita[] = $row;
     }
 
     ?>
     <div class="container my-5">
         <h3 class="my-3">
-            Desa Sibandang
+            Berita Desa Sibandang
             Kecamatan Muara, Kabupaten Tapanuli Utara
         </h3>
-        <h3 class="my-3">
-            Galeri
-        </h3>
         <div class="row justify-content-start">
-            <?php foreach ($data_galeri as $galeri) : ?>
+            <?php foreach ($data_berita as $berita) : ?>
                 <div class="col-4 mb-3">
                     <div class="card">
-                        <img src="../assets/upload/<?= $galeri['path_galeri'] ?>" alt="<?= $galeri['judul_galeri'] ?>" class="img-fluid w-2000 mb-150 equal-image img-responsive" class="card-img-top">
+                        <img src="../assets/upload/<?= $berita['gambar_berita'] ?>" alt="<?= $berita['judul_berita'] ?>" class="img-fluid w-2000 mb-150 equal-image img-responsive" class="card-img-top">
                         <div class="card-body">
-                            <p class="card-text"><?= $galeri['judul_galeri'] ?></p>
+                            <a href="detail-berita.php?id_berita=<?= $berita['id_berita'] ?>" class="card-text"><?= $berita['judul_berita'] ?></a>
                         </div>
                     </div>
                 </div>

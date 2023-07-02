@@ -1,6 +1,6 @@
 <?php include('../_partials/top.php') ?>
 
-<h1 class="page-header">Data Galeri Desa</h1>
+<h1 class="page-header">Data Berita</h1>
 <?php include('_partials/menu.php') ?>
 
 <?php include('data-index.php') ?>
@@ -17,12 +17,12 @@
             </thead>
             <tbody>
                 <?php $nomor = 1; ?>
-                <?php foreach ($data_galeri as $galeri) : ?>
+                <?php foreach ($data_berita as $berita) : ?>
                     <tr>
                         <th scope="row"><?= $nomor ?></th>
-                        <td><img src="../../assets/upload/<?= $galeri['path_galeri'] ?>" alt="<?= $galeri['judul_galeri'] ?>" width="50"></td>
+                        <td><img src="../../assets/berita/upload/<?= $berita['gambar_berita'] ?>" alt="<?= $berita['judul_berita']?>" width="50"></td>
 
-                        <td><?= $galeri['judul_galeri'] ?></td>
+                        <td><?= $berita['judul_berita']?></td>
                         <td>
                             <!-- Single button -->
                             <div class="btn-group">
@@ -30,14 +30,13 @@
                                     Aksi <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="ubah.php?id_galeri=<?= $galeri['id_galeri'] ?>"><span class="glyphicon glyphicon-pencil"></span> Ubah</a></li>
-                                    <li><a href="delete.php?id_galeri=<?= $galeri['id_galeri'] ?>&path_galeri=<?= $galeri['path_galeri'] ?>"><span class="glyphicon glyphicon-trash"></span> Hapus</a></li>
+                                    <li><a href="ubah.php?id_berita=<?= $berita['id_berita']?>"><span class="glyphicon glyphicon-pencil"></span> Ubah</a></li>
+                                    <li><a href="delete.php?id_berita=<?= $berita['id_berita']?>&gambar_berita=<?= $berita['gambar_berita']?>"> <span class="glyphicon glyphicon-trash"></span> Hapus</a></li>
                                 </ul>
                             </div>
                         </td>
                     </tr>
-                <?php $nomor++;
-                endforeach ?>
+                <?php $nomor++; endforeach ?>
             </tbody>
         </table>
     </div>
