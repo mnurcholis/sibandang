@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Desa Sibandang</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body style="background-image: url('../bg2.jpeg');">
@@ -14,46 +15,35 @@
     <?php
     include('../config/koneksi.php');
 
+    $get_id_kuliner = $_GET['id_kuliner'];
+
     // ambil dari database
-    $query = "SELECT * FROM berita";
+    $query = "SELECT * FROM kuliner WHERE id_kuliner = $get_id_kuliner";
 
     $hasil = mysqli_query($db, $query);
 
-    $data_berita = array();
+    $kuliner = array();
 
     while ($row = mysqli_fetch_assoc($hasil)) {
-        $data_berita[] = $row;
+        $kuliner[] = $row;
     }
 
     ?>
     <div class="container my-5">
         <h3 class="my-3">
-            Berita Desa Sibandang
-            Kecamatan Muara, Kabupaten Tapanuli Utara
+            <?= $kuliner[0]['judul_kuliner'] ?>
         </h3>
         <div class="row justify-content-start">
-            <?php foreach ($data_berita as $berita) : ?>
-                <div class="col-4 mb-3">
-                    <div class="card">
-                        <img src="../assets/berita/upload/<?= $berita['gambar_berita'] ?>" alt="<?= $berita['judul_berita'] ?>" class="img-fluid w-2000 mb-150 equal-image img-responsive" class="card-img-top">
-                        <div class="card-body">
-                            <a href="detail-berita.php?id_berita=<?= $berita['id_berita'] ?>" class="card-text"><?= $berita['judul_berita'] ?></a>
-                        </div>
+            <div class="col-12 mb-3">
+                <div class="card">
+                    <img src="../assets/kuliner/upload/<?= $kuliner[0]['gambar_kuliner'] ?>" alt="<?= $kuliner[0]['judul_kuliner'] ?>" class="img-fluid w-2000 mb-150 equal-image img-responsive" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text"><i class="fa fa-tags" aria-hidden="true"></i> <?= $kuliner[0]['harga'] ?></p>
+                        <p class="card-text"><?= $kuliner[0]['detail_kuliner'] ?></p>
                     </div>
                 </div>
-            <?php endforeach ?>
+            </div>
         </div>
-
-        <style>
-            .equal-image {
-                height: auto;
-                max-height: 200px;
-                /* Adjust the max-height value as needed */
-                object-fit: cover;
-                /* Ensure the image maintains its aspect ratio and covers the container */
-            }
-        </style>
-
 
     </div>
 

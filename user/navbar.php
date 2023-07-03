@@ -34,11 +34,15 @@
                     <a class="nav-link" href="potensi.php">Objek Wisata</a>
                     </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="demografis.php">Info Grafis</a>
+                    <a class="nav-link" href="demografis.php">Infografis</a>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="berita.php">Berita</a>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="kontak.php">Kontak</a>
                     </a>
                 </li>
                 <li class="nav-item ms-5">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 02, 2023 at 02:45 PM
+-- Generation Time: Jul 03, 2023 at 11:23 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -42,7 +42,11 @@ CREATE TABLE `berita` (
 --
 
 INSERT INTO `berita` (`id_berita`, `slug_berita`, `judul_berita`, `gambar_berita`, `isi_berita`, `waktu_berita`, `user_id`) VALUES
-(2, 'tambah-data-berita', 'Tambah data Berita', 'c692562238d8c12c32434c50b96d56ae.jpeg', 'Tambah data Berita Tambah jangan risukan untuk menjadi yang lebih baik lagi dan lagi dan jangan pula untuk mendjadiya bagsuuishao kjhosdakhoibsauibkj hoh uiuhouhs oihoaso', '2023-06-30 11:01:07', 1);
+(1, 'tenun-ulosmasyarakat-di-sibandang', '&quot;Tenun Ulos&quot;Masyarakat di Sibandang', '1a6408901d91eb043982dd3a790d86d5.jpg', '&quot;Tenun Ulos&quot;Masyarakat di Sibandang sudah sejak dahulu membuat ulos. Salah satu ulos unggulan yang dihasilkan adalah Ulos Harungguan, khusus para raja,', '2023-07-03 20:16:44', 1),
+(2, 'panen-kopi-coklat', 'Panen Kopi Coklat', '909cdd995b4a16fc8c4f275425cca808.jpg', '&quot;Panen Kopi Coklat&quot; Merupakan mata pencaharian Penduduk desa Sibandang', '2023-07-03 20:18:29', 1),
+(3, 'panen-mangga', 'Panen Mangga', '1f34ffbee39adcddbf8fe33c48dcb564.jpg', 'Panen Mangga merupakan salah mata pencaharian Penduduk desa Sibandang', '2023-07-03 20:18:58', 1),
+(4, 'dinas-kesehatan-membagikan-susu-kepada-anak-dibawah-umur-di-kantor-desa-sibandang', 'Dinas Kesehatan membagikan Susu kepada Anak dibawah umur Di Kantor Desa Sibandang', 'b23705627fa3300c4dea41b1bf3b065f.jpg', 'Dinas Kesehatan membagikan Susu kepada Anak dibawah umur Di Kantor Desa Sibandang', '2023-07-03 20:19:42', 1),
+(5, 'mengadakan-rapat-di-kantor-desa-sibandang', 'Mengadakan Rapat di Kantor Desa Sibandang', 'e503cbfc15902f4a2787c73727bfc5c0.jpg', 'Mengadakan Rapat di Kantor Desa Sibandang', '2023-07-03 20:20:06', 1);
 
 -- --------------------------------------------------------
 
@@ -178,7 +182,7 @@ CREATE TABLE `kuliner` (
   `judul_kuliner` varchar(255) NOT NULL,
   `slug_kuliner` varchar(255) DEFAULT NULL,
   `detail_kuliner` text NOT NULL,
-  `harga` int NOT NULL,
+  `harga` varchar(255) NOT NULL,
   `no_wa` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -187,8 +191,12 @@ CREATE TABLE `kuliner` (
 --
 
 INSERT INTO `kuliner` (`id_kuliner`, `gambar_kuliner`, `judul_kuliner`, `slug_kuliner`, `detail_kuliner`, `harga`, `no_wa`) VALUES
-(2, '9d607a663f3e9b0a90c3c8d4426640dc.jpeg', 'dsa', 'dsa', '3131', 300000, '3333'),
-(3, '68c42382c8b93fc29c2fcb6a444aeda5.jpeg', 'dsa1', 'dsa', '546846168 dfgfgfgdfgdf', 231321, '82516816160');
+(1, '79656c205e5f64c8c39b93c3f1665306.jpg', 'Dekka naniura', 'dekka-naniura', 'Dekke Naniura dalam bahasa Batak artinya ikan yang tidak dimasak melalui api / dalam Bahasa Batak: Dengke Mas na Niura. Ikan atau dalam bahasa batak disebut ihan merupakan bahan dasar pembuatan dekke naniura. Selain ikan mas segar mentah tanpa dimasak namun tidak amis', 'Rp. 85.000/kg', '82276619604'),
+(2, '83cb81c38e11956ffbea3b499481c10d.jpg', 'Napidanar', 'napidanar', 'Ikan nanitombur atau tombur Batak merupakan salah satu makan khas Batak Toba yang berasal dari Sumatera Utara. Rasa dari ikan nanitombur sangat enak karena rasanya sangat mengigit di lidah. Memasak ikan nanitombur cukup mudah. Biasanya ikan yang ditombur adalah ikan mas, ikan mujahir, ikan nila atau pun lele', 'Rp. 85.000/kg', '82276619604'),
+(3, '2e6ebea12498253a7f0e6fb52d620240.jpg', 'Arsik', 'arsik', 'Arsik adalah salah satu masakan khas masyarakat Batak atau yang disebut juga dekke na niarsik yang memiliki arti ikan yang dimasak hingga kering. Kata &#039;arsik&#039; berasal dari cara memasak hidangan ini yaitu mangarsik yang berarti hidangan ikan disiram-siram atau diguyur selama proses memasak.', 'Rp. 75.000/kg', '82276619604'),
+(4, '4ae42a6d8a9cd06c67883bed7763a9b9.jpg', 'Ikan panggang', 'ikan-panggang', 'Ikan bakar adalah hidangan ikan yang dibakar atau dipanggang di atas api atau bara api. Hidangan ikan yang dibakar, muncul secara universal di berbagai belahan dunia. ', 'Rp.80.000/kg', '82276619604'),
+(5, '1bc3e3e508d379fee2ed544cc3d709eb.jpg', 'Mie Gomak', 'mie-gomak', 'Mie Gomak merupakan salah satu dari sekian banyak kuliner khas tepian Danau Toba. Keistimewaannya tersua rasa pedas ketir dari percampuran cabai, bawang dan andaliman. Rasa ketir ini datang dari bumbu merica khas Toba bernama andaliman. Tumbuhan ini hanya bisa ditemukan di wilayah Sumatera Utara.', 'Rp. 8.000/porsi', '82276619604'),
+(6, '3207082bbee62515bc2d613b4c74aafe.jpg', 'Lappet ', 'lappet', 'Lampet (dibaca: Lappet) adalah salah satu panganan tradisional masyarakat Batak yang terbuat dari tepung beras, kelapa parut, dan parutan gula aren. Campuran ini kemudian dibungkus menggunakan daun pisang dengan bentuk menyerupai limas.', 'Rp.2.000/biji', '82276619604');
 
 -- --------------------------------------------------------
 
@@ -432,7 +440,7 @@ ALTER TABLE `warga_has_kartu_keluarga`
 -- AUTO_INCREMENT for table `berita`
 --
 ALTER TABLE `berita`
-  MODIFY `id_berita` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_berita` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `data_blt`
@@ -462,7 +470,7 @@ ALTER TABLE `kartu_keluarga`
 -- AUTO_INCREMENT for table `kuliner`
 --
 ALTER TABLE `kuliner`
-  MODIFY `id_kuliner` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_kuliner` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `mutasi`

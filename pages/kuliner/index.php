@@ -24,7 +24,7 @@
                         <td><img src="../../assets/kuliner/upload/<?= $kuliner['gambar_kuliner'] ?>" alt="<?= $kuliner['judul_kuliner'] ?>" width="50"></td>
 
                         <td><?= $kuliner['judul_kuliner'] ?></td>
-                        <td><?= "Rp " . number_format($kuliner['harga'], 0, ',', '.') ?></td>
+                        <td><?= $kuliner['harga'] ?></td>
                         <td>
                             <!-- Single button -->
                             <div class="btn-group">

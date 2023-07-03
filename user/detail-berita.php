@@ -35,7 +35,7 @@
         <div class="row justify-content-start">
             <div class="col-12 mb-3">
                 <div class="card">
-                    <img src="../assets/upload/<?= $berita[0]['gambar_berita'] ?>" alt="<?= $berita[0]['judul_berita'] ?>" class="img-fluid w-2000 mb-150 equal-image img-responsive" class="card-img-top">
+                    <img src="../assets/berita/upload/<?= $berita[0]['gambar_berita'] ?>" alt="<?= $berita[0]['judul_berita'] ?>" class="img-fluid w-2000 mb-150 equal-image img-responsive" class="card-img-top">
                     <div class="card-body">
                         <p class="card-text"><?= $berita[0]['isi_berita'] ?></p>
                     </div>

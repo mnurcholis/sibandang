@@ -55,7 +55,7 @@ while ($row = mysqli_fetch_assoc($hasil)) {
                 <tr>
                     <th>Harga Kuliner</th>
                     <td>:</td>
-                    <td><input type="number" class="form-control" name="harga" id="harga" value="<?= $data_kuliner[0]['harga'] ?>" required></td>
+                    <td><input type="text" class="form-control" name="harga" id="harga" value="<?= $data_kuliner[0]['harga'] ?>" required></td>
                 </tr>
                 <tr>
                     <th>No WA</th>
