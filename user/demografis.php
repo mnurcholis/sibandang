@@ -533,8 +533,28 @@ $jumlah_warga_p = mysqli_fetch_assoc($hasil_warga_p);
                 <div class="card border-info mb-3" style="max-width: 18rem;">
                     <div class="card-header">Informasi Wisata</div>
                     <div class="card-body text-info">
-                        <h5 class="card-title">Info card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="tracking.php" class="text-decoration-none">
+                                    Tracking Menuju Puncak Sibandang
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="buluhela.php" class="text-decoration-none">
+                                    Wisata Buluhela
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="wisata_sejarah.php" class="text-decoration-none">
+                                    Wisata Sejarah
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="agrowisata.php" class="text-decoration-none">
+                                    Agrowisata
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="card mb-4">
@@ -542,9 +562,7 @@ $jumlah_warga_p = mysqli_fetch_assoc($hasil_warga_p);
                         Informasi Hotel
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="hotel.php" class="btn btn-primary">Detail Hotel</a>
                     </div>
                 </div>
                 <div class="card mb-4">
@@ -552,19 +570,32 @@ $jumlah_warga_p = mysqli_fetch_assoc($hasil_warga_p);
                         Informasi Sekolah
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="school.php" class="text-decoration-none">
+                                    SD NEGERI 176357 SIBANDANG
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="smp.php" class="text-decoration-none">
+                                    SMP NEGERI 4 MUARA
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card mb-4">
                     <div class="card-header">
                         Informasi Kesehatan
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="kesehatan.php" class="text-decoration-none">
+                                    Puskesmas Pembantu Desa Sibandang
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -579,9 +610,13 @@ $jumlah_warga_p = mysqli_fetch_assoc($hasil_warga_p);
                         Jadwal Buka Kantor Desa
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <img src="img/kantore.jpg" class="img-fluid" alt="...">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Senin - Kamis</li>
+                            <li class="list-group-item">08.30 - 04.00</li>
+                            <li class="list-group-item">Jum'at</li>
+                            <li class="list-group-item">08.30 - 05.00</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="card">
@@ -589,9 +624,7 @@ $jumlah_warga_p = mysqli_fetch_assoc($hasil_warga_p);
                         Peta Desa
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <?php include "maps_desa.php"; ?>
                     </div>
                 </div>
             </div>

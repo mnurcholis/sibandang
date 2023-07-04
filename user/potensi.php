@@ -29,25 +29,25 @@
 
                         <p>Puncak Bukit Sibandang merupakan objek wisata yang banyak dikunjungi wisatawan. Kamu dapat menikmati pemandangan dari sisi tengah Danau Toba.</p>
 
-                        <img src="img/9.png" style="width: 200:200px;height: 300px;">
+                        <img src="img/9.png" style="width: 200px;height: 300px;">
 
                     </li>
                     <br>
                     <li> Rumah Bolon</li>
                     <p>Rumah Bolon atau rumah adat milik raja pertama Sibandang Opung Jautan Rajagukguk, dengan bentuk nya yang unik kini usianya telah lebih dari 300 tahun yang cat rumah dicampur dengan darah manusia. Dimana Rumah Bolon ini adalah simbol dari identitas masyarakat Batak yang tinggal Sumatera Utara.</p>
-                    <img src="img/10.png" style="width: 200:200px;height: 300px;">
+                    <img src="img/10.png" style="width: 200px;height: 300px;">
                     <br>
                     </li>
                     <br>
                     <li>Tempat Duduk Para Raja</li>
                     <p>Terdapat batu-batu besar melingkar merupakan tempat duduk para Raja Batak termasuk diantaranya Raja Sisingamangaraja XII. Ditempat itulah Para Raja sering membahas hal-hal mengenai rencana perlawanan terhadap belanda</p>
-                    <img src="img/11.png" style="width: 200:200px;height: 300px;">
+                    <img src="img/11.png" style="width: 200px;height: 300px;">
                     <br>
                     <ul>
                         <br>
                         <li> Losung / Lesung</li>
                         <p> Salah satu peninggalan yang masih adalah Lesung yang terbuat dari Batu dengan berat kurang lebih 10 ton. Konon menurut, salah satu keturunan Raja Pakiom yang menempati istana itu Tonggo Martunas Rajagukguk anak Jogi Banggal Naibaho yang merupakan salah satu keponakan ( bere) mengatakan bahwa lesung itu diterbangkan dari samosir namun yang pertama kurang bagus, barulah yang kedua diterbangkan lagi dan cocok</p>
-                        <img src="img/mita.jpeg" style="width: 200:200px;height: 300px;">
+                        <img src="img/mita.jpeg" style="width: 200px;height: 300px;">
                         <br>
                     </ul>
                     </p>
