@@ -18,7 +18,7 @@
             /* Add this to remove default margin */
             padding: 0;
             /* Add this to remove default padding */
-            background-image: url("../bg3.jpeg");
+            /* background-image: url("../bg3.jpeg"); */
             /* Add background image */
             background-size: cover;
             /* Adjust background size */
@@ -116,6 +116,25 @@
 
     <!-- Remove the <div> element that wraps the <img> tag -->
     <!-- Adjust the positioning of other elements based on your requirements -->
+    
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../bg.jpeg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../bg3.jpeg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
     <br><br><br><br><br><br><br><br><br>
     <footer class="footer bg-white w-100" style="position:fixed;bottom:0;width:100%;">
